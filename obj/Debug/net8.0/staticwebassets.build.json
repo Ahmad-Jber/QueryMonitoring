@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "mGp7XK9jtMti1h0TgdjHyChAHUhHe85FqYZULMVNjlw=",
+  "Hash": "XeX2FFwCXvgX+a4sDD54x1FOmzIeBxp+VUm56yYxM8A=",
   "Source": "QueryMonitoring",
   "BasePath": "_content/QueryMonitoring",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

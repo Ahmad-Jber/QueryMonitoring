@@ -84,3 +84,7 @@ C:\Users\BAHAA.ABUSHEHADEH\source\repos\QueryMonitoring\obj\Debug\net8.0\refint\
 C:\Users\BAHAA.ABUSHEHADEH\source\repos\QueryMonitoring\obj\Debug\net8.0\QueryMonitoring.pdb
 C:\Users\BAHAA.ABUSHEHADEH\source\repos\QueryMonitoring\obj\Debug\net8.0\QueryMonitoring.genruntimeconfig.cache
 C:\Users\BAHAA.ABUSHEHADEH\source\repos\QueryMonitoring\obj\Debug\net8.0\ref\QueryMonitoring.dll
+C:\Users\BAHAA.ABUSHEHADEH\source\repos\QueryMonitoring\bin\Debug\net8.0\QueryMonitoring.staticwebassets.endpoints.json
+C:\Users\BAHAA.ABUSHEHADEH\source\repos\QueryMonitoring\obj\Debug\net8.0\QueryMonitoring.sourcelink.json
+C:\Users\BAHAA.ABUSHEHADEH\source\repos\QueryMonitoring\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\BAHAA.ABUSHEHADEH\source\repos\QueryMonitoring\obj\Debug\net8.0\staticwebassets\msbuild.QueryMonitoring.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
