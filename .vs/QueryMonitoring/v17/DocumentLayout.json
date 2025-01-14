@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{29F0DBC3-040F-4A01-8CE2-9154159E8DC4}|QueryMonitoring.csproj|c:\\users\\bahaa.abushehadeh\\source\\repos\\querymonitoring\\querymonitoring.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{29F0DBC3-040F-4A01-8CE2-9154159E8DC4}|QueryMonitoring.csproj|solutionrelative:querymonitoring.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29F0DBC3-040F-4A01-8CE2-9154159E8DC4}|QueryMonitoring.csproj|c:\\users\\bahaa.abushehadeh\\source\\repos\\querymonitoring\\fullaudiatedentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29F0DBC3-040F-4A01-8CE2-9154159E8DC4}|QueryMonitoring.csproj|solutionrelative:fullaudiatedentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29F0DBC3-040F-4A01-8CE2-9154159E8DC4}|QueryMonitoring.csproj|c:\\users\\bahaa.abushehadeh\\source\\repos\\querymonitoring\\product\\entities\\productbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29F0DBC3-040F-4A01-8CE2-9154159E8DC4}|QueryMonitoring.csproj|solutionrelative:product\\entities\\productbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29F0DBC3-040F-4A01-8CE2-9154159E8DC4}|QueryMonitoring.csproj|c:\\users\\bahaa.abushehadeh\\source\\repos\\querymonitoring\\product\\entities\\vegetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29F0DBC3-040F-4A01-8CE2-9154159E8DC4}|QueryMonitoring.csproj|solutionrelative:product\\entities\\vegetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29F0DBC3-040F-4A01-8CE2-9154159E8DC4}|QueryMonitoring.csproj|c:\\users\\bahaa.abushehadeh\\source\\repos\\querymonitoring\\product\\entities\\fruit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29F0DBC3-040F-4A01-8CE2-9154159E8DC4}|QueryMonitoring.csproj|solutionrelative:product\\entities\\fruit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FullAudiatedEntity.cs",
+              "DocumentMoniker": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\FullAudiatedEntity.cs",
+              "RelativeDocumentMoniker": "FullAudiatedEntity.cs",
+              "ToolTip": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\FullAudiatedEntity.cs",
+              "RelativeToolTip": "FullAudiatedEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T14:02:02.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductBase.cs",
+              "DocumentMoniker": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\Product\\Entities\\ProductBase.cs",
+              "RelativeDocumentMoniker": "Product\\Entities\\ProductBase.cs",
+              "ToolTip": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\Product\\Entities\\ProductBase.cs",
+              "RelativeToolTip": "Product\\Entities\\ProductBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T13:59:56.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Vegetable.cs",
+              "DocumentMoniker": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\Product\\Entities\\Vegetable.cs",
+              "RelativeDocumentMoniker": "Product\\Entities\\Vegetable.cs",
+              "ToolTip": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\Product\\Entities\\Vegetable.cs",
+              "RelativeToolTip": "Product\\Entities\\Vegetable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T13:48:28.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Fruit.cs",
+              "DocumentMoniker": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\Product\\Entities\\Fruit.cs",
+              "RelativeDocumentMoniker": "Product\\Entities\\Fruit.cs",
+              "ToolTip": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\Product\\Entities\\Fruit.cs",
+              "RelativeToolTip": "Product\\Entities\\Fruit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T13:48:13.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QueryMonitoring",
+              "DocumentMoniker": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\QueryMonitoring.csproj",
+              "RelativeDocumentMoniker": "QueryMonitoring.csproj",
+              "ToolTip": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\QueryMonitoring.csproj",
+              "RelativeToolTip": "QueryMonitoring.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-14T13:46:42.646Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+@QueryMonitoring_HostAddress = http://localhost:5077
+
+GET {{QueryMonitoring_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
