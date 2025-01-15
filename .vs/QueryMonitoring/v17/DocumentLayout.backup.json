@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{29F0DBC3-040F-4A01-8CE2-9154159E8DC4}|QueryMonitoring.csproj|c:\\users\\bahaa.abushehadeh\\source\\repos\\querymonitoring\\querymonitoring.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{29F0DBC3-040F-4A01-8CE2-9154159E8DC4}|QueryMonitoring.csproj|solutionrelative:querymonitoring.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{29F0DBC3-040F-4A01-8CE2-9154159E8DC4}|QueryMonitoring.csproj|c:\\users\\bahaa.abushehadeh\\source\\repos\\querymonitoring\\databasemanagement\\dbcontexts\\alqimadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29F0DBC3-040F-4A01-8CE2-9154159E8DC4}|QueryMonitoring.csproj|solutionrelative:databasemanagement\\dbcontexts\\alqimadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "QueryMonitoring",
-              "DocumentMoniker": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\QueryMonitoring.csproj",
-              "RelativeDocumentMoniker": "QueryMonitoring.csproj",
-              "ToolTip": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\QueryMonitoring.csproj",
-              "RelativeToolTip": "QueryMonitoring.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-14T13:46:42.646Z",
+              "Title": "AlQimaDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\DatabaseManagement\\DbContexts\\AlQimaDbContext.cs",
+              "RelativeDocumentMoniker": "DatabaseManagement\\DbContexts\\AlQimaDbContext.cs",
+              "ToolTip": "C:\\Users\\BAHAA.ABUSHEHADEH\\source\\repos\\QueryMonitoring\\DatabaseManagement\\DbContexts\\AlQimaDbContext.cs",
+              "RelativeToolTip": "DatabaseManagement\\DbContexts\\AlQimaDbContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T09:08:03.625Z",
               "EditorCaption": ""
             }
           ]

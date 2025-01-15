@@ -2,6 +2,16 @@ using Microsoft.EntityFrameworkCore;
 using QueryMonitoring.DatabaseManagement.DbContexts;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<AlQimaDbContext>(opts =>
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("AlQimaDb")));
+builder.Services.AddDbContext<BrandDbContext>(opts =>
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("BrandDb")));
+builder.Services.AddDbContext<RamallahDbContext>(opts =>
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("RamallahMall")));
+builder.Services.AddDbContext<LacasaDbContext>(opts =>
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("LacasaMall")));
+builder.Services.AddDbContext<CityDbContext>(opts =>
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("CityMall")));
 
 // Add services to the container.
 
@@ -26,13 +36,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-builder.Services.AddDbContext<AlQimaDbContext>(opts =>
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("AlQimaDb")));
-builder.Services.AddDbContext<BrandDbContext>(opts =>
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("BrandDb")));
-builder.Services.AddDbContext<RamallahDbContext>(opts =>
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("RamallahMall")));
-builder.Services.AddDbContext<LacasaDbContext>(opts =>
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("LacasaMall")));
-builder.Services.AddDbContext<CityDbContext>(opts =>
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("CityMall")));

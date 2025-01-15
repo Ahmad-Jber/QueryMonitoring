@@ -6,6 +6,10 @@ namespace QueryMonitoring.DatabaseManagement.DbContexts;
 
 public class CityDbContext: DbContext
 {
+    public CityDbContext(DbContextOptions<CityDbContext> options) : base(options)
+    {
+    }
+
     DbSet<Product> Products { get; set; }
     DbSet<ProductType> ProductTypes { get; set; }
     DbSet<Shop> Shops { get; set; }

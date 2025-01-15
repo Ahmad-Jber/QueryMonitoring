@@ -6,6 +6,10 @@ namespace QueryMonitoring.DatabaseManagement.DbContexts;
 
 public class RamallahDbContext: DbContext
 {
+    public RamallahDbContext(DbContextOptions<RamallahDbContext> options) : base(options)
+    {
+    }
+
     DbSet<Product> Products { get; set; }
     DbSet<ProductType> ProductTypes { get; set; }
     DbSet<Shop> Shops { get; set; }

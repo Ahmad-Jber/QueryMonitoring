@@ -7,6 +7,20 @@ namespace QueryMonitoring.DatabaseManagement.DbContexts;
 
 public class AlQimaDbContext: DbContext
 {
+    public AlQimaDbContext(DbContextOptions<AlQimaDbContext> options) : base(options)
+    {
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        base.OnConfiguring(optionsBuilder);
+    }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+    }
+
     DbSet<Product> Products { get; set; }
     DbSet<ProductType> ProductTypes { get; set; }
     DbSet<Shop> Shops { get; set; }
