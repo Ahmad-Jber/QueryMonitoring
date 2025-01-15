@@ -6,9 +6,16 @@ namespace QueryMonitoring.Products.Entities
 {
     public class Product
     {
+        public Product()
+        {
+            Id = Guid.NewGuid();
+        }
+
         public Guid Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
+        public int ProductTypeId { get; set; }
+        [ForeignKey("ProductTypeId")]
         public ProductType ProductType { get; set; }
         public int? Quantity { get; set; }
         public float Size { get; set; }

@@ -4,6 +4,11 @@ namespace QueryMonitoring.Entities;
 
 public class Attachment
 {
+    public Attachment()
+    {
+        Id = Guid.NewGuid();
+    }
+
     public Guid Id { get; set; }
     public string EntityId { get; set; }
     public string EntityName { get; set; }
