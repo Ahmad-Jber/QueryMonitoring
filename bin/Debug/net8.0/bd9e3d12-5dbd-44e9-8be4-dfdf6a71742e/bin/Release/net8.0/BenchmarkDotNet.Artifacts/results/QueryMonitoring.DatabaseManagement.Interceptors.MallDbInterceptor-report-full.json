@@ -1,0 +1,45 @@
+{
+   "Title":"QueryMonitoring.DatabaseManagement.Interceptors.MallDbInterceptor-20250117-232803",
+   "HostEnvironmentInfo":{
+      "BenchmarkDotNetCaption":"BenchmarkDotNet",
+      "BenchmarkDotNetVersion":"0.14.0",
+      "OsVersion":"Windows 11 (10.0.22631.4751/23H2/2023Update/SunValley3)",
+      "ProcessorName":"Intel Core i7-8565U CPU 1.80GHz (Whiskey Lake)",
+      "PhysicalProcessorCount":1,
+      "PhysicalCoreCount":4,
+      "LogicalCoreCount":8,
+      "RuntimeVersion":".NET 8.0.12 (8.0.1224.60305)",
+      "Architecture":"X64",
+      "HasAttachedDebugger":false,
+      "HasRyuJit":true,
+      "Configuration":"DEBUG",
+      "DotNetCliVersion":"8.0.403",
+      "ChronometerFrequency":{
+         "Hertz":10000000
+      },
+      "HardwareTimerKind":"Unknown"
+   },
+   "Benchmarks":[
+      {
+         "DisplayInfo":"MallDbInterceptor.FakeMethod: Job-WGOICZ(OutlierMode=DontRemove, Server=True, RunStrategy=Monitoring)",
+         "Namespace":"QueryMonitoring.DatabaseManagement.Interceptors",
+         "Type":"MallDbInterceptor",
+         "Method":"FakeMethod",
+         "MethodTitle":"FakeMethod",
+         "Parameters":"",
+         "FullName":"QueryMonitoring.DatabaseManagement.Interceptors.MallDbInterceptor.FakeMethod",
+         "HardwareIntrinsics":"",
+         "Statistics":null,
+         "Memory":{
+            "Gen0Collections":0,
+            "Gen1Collections":0,
+            "Gen2Collections":0,
+            "TotalOperations":0,
+            "BytesAllocatedPerOperation":null
+         },
+         "Measurements":[
+            
+         ]
+      }
+   ]
+}

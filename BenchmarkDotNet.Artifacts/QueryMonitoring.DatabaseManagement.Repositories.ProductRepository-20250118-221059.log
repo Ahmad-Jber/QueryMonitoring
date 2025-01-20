@@ -1,0 +1,8 @@
+// Validating benchmarks:
+// Benchmark ProductRepository.SeedProducts: Job-NCOVDI(OutlierMode=DontRemove, Server=True, RunStrategy=ColdStart) [count=10]
+//    * Failed to execute benchmark 'ProductRepository.SeedProducts: Job-NCOVDI(OutlierMode=DontRemove, Server=True, RunStrategy=ColdStart) [count=10]', exception was: 'Type QueryMonitoring.DatabaseManagement.Repositories.ProductRepository: no property or field count found.'
+
+//    * Assembly QueryMonitoring which defines benchmarks is non-optimized
+Benchmark was built without optimization enabled (most probably a DEBUG configuration). Please, build it in RELEASE.
+If you want to debug the benchmarks, please see https://benchmarkdotnet.org/articles/guides/troubleshooting.html#debugging-benchmarks.
+

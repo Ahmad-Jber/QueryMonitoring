@@ -1,38 +1,53 @@
 using Microsoft.EntityFrameworkCore;
 using QueryMonitoring.DatabaseManagement.DbContexts;
+using QueryMonitoring.DatabaseManagement.Interceptors;
+using QueryMonitoring.DatabaseManagement.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<AlQimaDbContext>(opts =>
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("AlQimaDb")));
-builder.Services.AddDbContext<BrandDbContext>(opts =>
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("BrandDb")));
-builder.Services.AddDbContext<RamallahDbContext>(opts =>
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("RamallahMall")));
-builder.Services.AddDbContext<LacasaDbContext>(opts =>
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("LacasaMall")));
-builder.Services.AddDbContext<CityDbContext>(opts =>
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("CityMall")));
 
-// Add services to the container.
+// Register HttpClient (using IHttpClientFactory is the preferred method)
+builder.Services.AddHttpClient();  // Register IHttpClientFactory
+builder.Services.AddMemoryCache();
+// Register your other services (DbContexts, Repositories, etc.)
+builder.Services.AddScoped<MallDbInterceptor>();
+builder.Services.AddDbContext<AlQimaDbContext>((serviceProvider, options) =>
+{
+    var interceptor = serviceProvider.GetRequiredService<MallDbInterceptor>();
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AlQimaDb"))
+        .AddInterceptors(interceptor);
+});
+builder.Services.AddDbContext<RamallahDbContext>((serviceProvider, options) =>
+{
+    var interceptor = serviceProvider.GetRequiredService<MallDbInterceptor>();
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RamallahMall"))
+        .AddInterceptors(interceptor);
+});
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
 
+// Add services to the container
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddRazorPages();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", r =>
+    {
+        r.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
-
+app.MapRazorPages();
+app.UseCors("AllowAll");
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

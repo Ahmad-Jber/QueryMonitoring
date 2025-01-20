@@ -27,7 +27,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://nuget.devexpress.com/czmFZZE7Mbi1YAkcbueRDsiUmngsgLlC5kVYevcZFpZjyEzwzH/api": {}
         },
@@ -45,13 +44,30 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BenchmarkDotNet": {
+              "target": "Package",
+              "version": "[0.14.0, )"
+            },
+            "BenchmarkDotNet.Diagnostics.Windows": {
+              "target": "Package",
+              "version": "[0.14.0, )"
+            },
+            "BenchmarkDotNet.Diagnostics.dotMemory": {
+              "target": "Package",
+              "version": "[0.14.0, )"
+            },
+            "BenchmarkDotNet.Diagnostics.dotTrace": {
+              "target": "Package",
+              "version": "[0.14.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -84,6 +100,42 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.1.0, )"
+            },
+            "MySql.Data.EntityFramework": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "MySqlClient": {
+              "target": "Package",
+              "version": "[5.5.2, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "MySqlConnector.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "MySqlConnector.Logging.Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -100,6 +152,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.11, 8.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -108,7 +178,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\BAHAA.ABUSHEHADEH\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Info and Monitoring</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .product-info, .monitoring {
+            width: 80%;
+            background: #fff;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-info h2, .monitoring h2 {
+            margin-top: 0;
+        }
+
+        .monitoring-stats {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        .stat {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .stat h3 {
+            margin: 5px 0;
+        }
+
+        .progress-bar {
+            position: relative;
+            height: 20px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #4caf50;
+            border-radius: 10px;
+        }
+
+        .button {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <button class="button" id="get-product">Get Product</button>
+    <div class="product-info" id="product-info" style="display: none;">
+        <h2>Product Information</h2>
+        <p><strong>Name:</strong> <span id="product-name">Product Name</span></p>
+        <p><strong>Price:</strong> <span id="product-price">$99.99</span></p>
+        <p><strong>Quantity:</strong> <span id="product-quantity">50</span></p>
+        <p><strong>Size:</strong> <span id="product-size">0.3</span></p>
+        <p><strong>Manufacturer:</strong> <span id="product-manufacturer">Manufacturer</span></p>
+    </div>
+
+    <div class="monitoring">
+        <h2>System Monitoring</h2>
+        <div class="monitoring-stats">
+            <div class="stat">
+                <h3>Database Name</h3>
+                <p id="database-name">N/A</p>
+            </div>
+            <div class="stat">
+                <h3>Query</h3>
+                <p id="query">N/A</p>
+            </div>
+            <div class="stat">
+                <h3>Query Duration</h3>
+                <p id="query-duration">N/A</p>
+            </div>
+            <div class="stat">
+                <h3>Memory Usage</h3>
+                <div class="progress-bar">
+                    <div class="progress" id="memory-progress" style="width: 0%;"></div>
+                </div>
+                <p id="memory-usage">0%</p>
+            </div>
+            <div class="stat">
+                <h3>CPU Time</h3>
+                <p id="cpu-time">N/A</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('get-product').addEventListener('click', async function () {
+        try {
+            // Fetch product data from the backend
+            const response = await fetch('https://localhost:44323/api/Mall/GetAllProducts');
+            if (!response.ok) {
+                throw new Error('Failed to fetch product data');
+            }
+            const data = await response.json();
+            const product = data.products;
+            const monitoring = data.monitoring || {};
+
+            // Update the product information UI
+            document.getElementById('product-name').textContent = product.name;
+            document.getElementById('product-price').textContent = `$${product.price}`;
+            document.getElementById('product-quantity').textContent = product.quantity;
+            document.getElementById('product-size').textContent = product.size;
+            document.getElementById('product-manufacturer').textContent = product.manufacturer;
+            document.getElementById('product-info').style.display = 'block';
+
+            // Update monitoring data
+            updateMonitoringData({
+                databaseName: monitoring.databaseName || 'N/A',
+                query: monitoring.query || 'N/A',
+                queryDuration: monitoring.duration || 'N/A',
+                memoryUsage: monitoring.totalMemoryInUse || 0,
+                cpuTime: monitoring.totalCpuTime || 'N/A'
+            });
+        } catch (error) {
+            console.error('Error fetching product data:', error);
+            alert('Failed to load product data. Please try again.');
+        }
+    });
+
+    function updateMonitoringData({ databaseName, query, queryDuration, memoryUsage, cpuTime }) {
+        // Update database name
+        document.getElementById('database-name').textContent = databaseName;
+
+        // Update query
+        document.getElementById('query').textContent = query;
+
+        // Update query duration
+        document.getElementById('query-duration').textContent = queryDuration;
+
+        // Update memory usage
+        const memoryInPercent = (memoryUsage / 1) * 100; // Assuming max 1 GB
+        const memoryProgress = document.getElementById('memory-progress');
+        const memoryUsageText = document.getElementById('memory-usage');
+        memoryProgress.style.width = memoryInPercent + '%';
+        memoryUsageText.textContent = memoryInPercent.toFixed(2) + '%';
+
+        // Update CPU time
+        document.getElementById('cpu-time').textContent = cpuTime;
+    }
+</script>
+</body>
+</html>

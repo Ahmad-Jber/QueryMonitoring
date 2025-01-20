@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Monitoring</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>System Monitoring Data</h1>
+
+    <label for="count">Enter Count:</label>
+    <input type="number" id="count" min="1" value="1" />
+    <button id="fetchData">Fetch Data</button>
+
+    <div id="output" class="result" hidden>
+        <h2>Monitoring Details</h2>
+        <p><strong>Database Name:</strong> <span id="databaseName"></span></p>
+        <p><strong>Query:</strong> <span id="query"></span></p>
+        <p><strong>Duration:</strong> <span id="duration"></span></p>
+        <p><strong>Total CPU Time:</strong> <span id="totalCpuTime"></span></p>
+        <p><strong>Total Memory in Use:</strong> <span id="totalMemory"></span> MB</p>
+        <p><strong>Total Duration Time:</strong> <span id="totalDurationTime"></span></p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('fetchData').addEventListener('click', async () => {
+        const count = document.getElementById('count').value;
+        const output = document.getElementById('output');
+
+        try {
+            const response = await fetch(`https://localhost:44323/api/Mall/SeedProducts?count=${count}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            const monitoring = data.monitoring;
+
+            // Populate the data into the DOM
+            document.getElementById('databaseName').textContent = monitoring.databaseName;
+            document.getElementById('query').textContent = monitoring.query || "(empty)";
+            document.getElementById('duration').textContent = monitoring.duration;
+            document.getElementById('totalCpuTime').textContent = monitoring.totalCpuTime;
+            document.getElementById('totalMemory').textContent = (monitoring.totalMemoryInUse * 1024).toFixed(2); // Convert GB to MB
+            document.getElementById('totalDurationTime').textContent = data.totalDurationTime;
+
+            // Show the output container
+            output.hidden = false;
+        } catch (error) {
+            alert(`Failed to fetch data: ${error.message}`);
+            console.error(error);
+        }
+    });
+</script>
+</body>
+</html>

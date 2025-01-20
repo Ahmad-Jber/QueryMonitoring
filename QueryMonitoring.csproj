@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+	  <PackageReference Include="BenchmarkDotNet" Version="0.14.0" />
+	  <PackageReference Include="BenchmarkDotNet.Diagnostics.dotMemory" Version="0.14.0" />
+	  <PackageReference Include="BenchmarkDotNet.Diagnostics.dotTrace" Version="0.14.0" />
+	  <PackageReference Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.14.0" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="9.0.0" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="9.0.0" />
@@ -20,6 +24,15 @@
 	    <PrivateAssets>all</PrivateAssets>
 	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 	  </PackageReference>
+	  <PackageReference Include="MySql.Data" Version="9.1.0" />
+	  <PackageReference Include="MySql.Data.EntityFramework" Version="9.0.0" />
+	  <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.8" />
+	  <PackageReference Include="MySqlClient" Version="5.5.2" />
+	  <PackageReference Include="MySqlConnector" Version="2.4.0" />
+	  <PackageReference Include="MySqlConnector.DependencyInjection" Version="2.4.0" />
+	  <PackageReference Include="MySqlConnector.Logging.Microsoft.Extensions.Logging" Version="2.1.0" />
+	  <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
+	  <PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Design" Version="1.1.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 

@@ -1,10 +1,10 @@
+using QueryMonitoring.Entities;
 using QueryMonitoring.Enums;
 
 namespace QueryMonitoring.Products.Entities;
 
-public class ProductType
+public class ProductType: EntityBase<int>
 {
-    public int Id { get; set; }
     public string Name { get; set; }
     public PriceCategoryEnum PriceCategory { get; set; }
 }

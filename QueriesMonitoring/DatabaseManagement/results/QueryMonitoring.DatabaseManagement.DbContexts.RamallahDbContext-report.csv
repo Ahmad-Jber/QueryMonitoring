@@ -1,0 +1,2 @@
+Namespace,Mean,StdErr,StdDev,Min,Max,Q1,Median,Q3,Iterations,Op/s,Rank,Baseline
+QueryMonitoring.DatabaseManagement.DbContexts,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,?,No

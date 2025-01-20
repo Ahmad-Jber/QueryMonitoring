@@ -1,0 +1,41 @@
+*** Plot: C:\Users\BAHAA.ABUSHEHADEH\source\repos\QueryMonitoring\BenchmarkDotNet.Artifacts\results\QueryMonitoring.DatabaseManagement.Interceptors.MallDbInterceptor-boxplot.png ***
+------------------------------
+*** Plot: C:\Users\BAHAA.ABUSHEHADEH\source\repos\QueryMonitoring\BenchmarkDotNet.Artifacts\results\QueryMonitoring.DatabaseManagement.Interceptors.MallDbInterceptor-barplot.png ***
+------------------------------
+Attaching package: 'dplyr'
+The following objects are masked from 'package:stats':
+    filter, lag
+The following objects are masked from 'package:base':
+    intersect, setdiff, setequal, union
+Attaching package: 'gdata'
+The following objects are masked from 'package:dplyr':
+    combine, first, last, starts_with
+The following object is masked from 'package:stats':
+    nobs
+The following object is masked from 'package:utils':
+    object.size
+The following object is masked from 'package:base':
+    startsWith
+Attaching package: 'tidyr'
+The following object is masked from 'package:gdata':
+    starts_with
+Attaching package: 'gridExtra'
+The following object is masked from 'package:gdata':
+    combine
+The following object is masked from 'package:dplyr':
+    combine
+R.devices v2.17.2 (2024-01-29 13:30:11 UTC) successfully loaded. See ?R.devices for help.
+`summarise()` has grouped output by 'Target_Method'. You can override using the
+`.groups` argument.
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Warning messages:
+1: In min(result$Measurement_Value) :
+  no non-missing arguments to min; returning Inf
+2: In min(result$Measurement_Value) :
+  no non-missing arguments to min; returning Inf
+3: In min(result$Measurement_Value) :
+  no non-missing arguments to min; returning Inf
+4: `group_by_()` was deprecated in dplyr 0.7.0.
+ظ╣ Please use `group_by()` instead.
+ظ╣ See vignette('programming') for more help 
